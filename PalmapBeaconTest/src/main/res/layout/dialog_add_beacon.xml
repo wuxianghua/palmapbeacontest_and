@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/add_beacon_root"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="20dp"
+              android:layout_marginLeft="20dp"
+              android:background="@drawable/block_shadow_bg"
+    >
+
+  <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="25dp"
+          android:gravity="center"
+          android:textColor="@color/text_color_2"
+          android:textSize="@dimen/t_xxl"
+          android:text="编辑点位"/>
+
+  <ScrollView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/layout_dlarge"
+          android:layout_marginLeft="@dimen/layout_dlarge"
+          android:layout_marginRight="@dimen/layout_dlarge"
+          android:background="@drawable/edit_text_bg_2"
+          android:layout_weight="1">
+
+        <EditText
+                android:id="@+id/add_beacon_uuid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layout_small"
+                android:textSize="@dimen/t_l"
+                android:textColor="@color/text_color_2"
+                android:hint="UUID"
+                android:background="@null"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/layout_large"
+          android:layout_marginLeft="@dimen/layout_dlarge"
+          android:layout_marginRight="@dimen/layout_dlarge"
+          android:background="@drawable/edit_text_bg_2"
+          android:layout_weight="1">
+
+        <EditText
+                android:id="@+id/add_beacon_major"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layout_small"
+                android:textSize="@dimen/t_l"
+                android:textColor="@color/text_color_2"
+                android:hint="Major"
+                android:inputType="number"
+                android:background="@null"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/layout_large"
+          android:layout_marginLeft="@dimen/layout_dlarge"
+          android:layout_marginRight="@dimen/layout_dlarge"
+          android:background="@drawable/edit_text_bg_2"
+          android:layout_weight="1">
+
+        <EditText
+                android:id="@+id/add_beacon_minor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layout_small"
+                android:textSize="@dimen/t_l"
+                android:textColor="@color/text_color_2"
+                android:hint="Minor"
+                android:inputType="number"
+                android:background="@null"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_weight="1"
+          android:gravity="center_vertical">
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:text="编辑"
+            android:id="@+id/tbtn_edit"
+            android:layout_weight="1"
+            android:checked="false"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:textOn="点击锁定"
+            android:textOff="点击编辑"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="移动"
+            android:id="@+id/btn_move"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="删除"
+            android:id="@+id/btn_delete"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"/>
+      </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="0dp"
+          android:layout_weight="0.5">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/add_beacon_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/layout_dlarge"
+            android:layout_marginBottom="@dimen/layout_large"
+            android:padding="@dimen/layout_small"
+            android:gravity="center"
+            android:textSize="@dimen/t_l"
+            android:textColor="@color/white"
+            android:text="取消"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/add_beacon_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/layout_large"
+            android:padding="@dimen/layout_small"
+            android:gravity="center"
+            android:textSize="@dimen/t_l"
+            android:textColor="@color/white"
+            android:text="保存"
+            android:background="@drawable/button_bg"
+            android:layout_marginRight="@dimen/layout_dlarge"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout>

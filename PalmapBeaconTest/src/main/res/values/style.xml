@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style parent="android:Animation" name="AnimZoomV">
+        <item name="android:windowEnterAnimation">@anim/dialog_push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_push_up_out</item>
+    </style>
+
+    <style name="myDialogAnimation" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="myDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/myDialogAnimation</item>
+    </style>
+
+    <!--背景图Theme-->
+    <style name="AppStartLoad" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/loadingpage</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!--透明Theme-->
+    <style name="AppStartLoadTranslucent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!--白色Theme-->
+    <style name="AppStartLoadWhite" parent="android:Theme.DeviceDefault">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

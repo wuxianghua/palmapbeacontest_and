@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/include_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.palmap.BluetoothUtils.widget.NoScrollViewPager
+        android:id="@+id/map_beacon_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/action_bar"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:flipInterval="30"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:nestedScrollingEnabled="false"
+        android:persistentDrawingCache="animation"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/map_beacon_map_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/theme_bg_color"
+            android:gravity="center"
+            android:layout_marginRight="1dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/layout_small">
+
+            <TextView
+                android:id="@+id/map_beacon_map_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ico_map_map_nor"/>
+
+            <TextView
+                android:id="@+id/map_beacon_map_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="地图"
+                android:textColor="@color/white"
+                android:textSize="@dimen/t_s"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/map_beacon_beacon_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/theme_bg_color"
+            android:layout_weight="1"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/layout_small">
+
+            <TextView
+                android:id="@+id/map_beacon_beacon_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ico_map_list_nor"/>
+
+            <TextView
+                android:id="@+id/map_beacon_beacon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="列表"
+                android:textColor="@color/white"
+                android:textSize="@dimen/t_s"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

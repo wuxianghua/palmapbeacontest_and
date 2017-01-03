@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#EEEEEE">
+
+  <ImageView
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@color/white"/>
+
+  <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:gravity="center">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:text="蓝牙巡检工具"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/input_box_bg"
+        android:focusable="false">
+
+      <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="20dp"
+              android:textColor="@color/common_text_color_1"
+              android:layout_marginLeft="10dp"
+              android:text="账号:"/>
+
+      <EditText
+              android:id="@+id/loading_et_user_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/email"
+              android:textSize="19dp"
+              android:textColor="@color/common_text_color_2"
+              android:singleLine="true"
+          android:editable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/input_box_bg"
+        android:focusable="false">
+
+      <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="20dp"
+              android:textColor="@color/common_text_color_1"
+              android:layout_marginLeft="10dp"
+              android:text="密码: "/>
+
+      <EditText
+              android:id="@+id/loading_et_password"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="19sp"
+              android:textColor="@color/common_text_color_2"
+              android:text=""
+              android:inputType="textPassword"
+              android:singleLine="true"
+          android:editable="true" />
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/loading_btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:clickable="true"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:text="登  录"
+            android:gravity="center"
+            android:background="@drawable/input_box_bg"/>
+
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left|top"
+      android:text="@string/login_setting"
+      android:textColor="@color/block_segment_line"
+      android:textSize="17dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="20dp"
+      android:clickable="true"
+      android:id="@+id/tv_setting"
+      android:enabled="true"
+      android:focusable="true"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right|top"
+      android:text="离线登陆"
+      android:textColor="@color/block_segment_line"
+      android:textSize="17dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginRight="20dp"
+      android:clickable="true"
+      android:id="@+id/tv_offline"
+      android:enabled="true"
+      android:focusable="true"/>
+
+</FrameLayout>

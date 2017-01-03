@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f5f5f5">
+
+    <include
+        android:id="@+id/action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_action_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="楼层:"
+                android:id="@+id/tv_beacon_floor"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:textColor="@color/text_color_beacon"
+                android:gravity="left|center_vertical" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="正常/总数:"
+                android:id="@+id/tv_beacon_num"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:textColor="@color/text_color_beacon"
+                android:gravity="left|center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="巡检人:"
+                android:id="@+id/tv_beacon_user"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_beacon"
+                android:textSize="14dp"
+                android:singleLine="true"
+                android:gravity="left|center_vertical"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="时间:"
+                android:layout_gravity="center"
+                android:id="@+id/tv_beacon_time"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_beacon"
+                android:textSize="14dp"
+                android:gravity="left|center_vertical"
+                android:singleLine="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/scan_history_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:scrollbars="vertical"
+        android:clickable="true"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/action_bar_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:background="@color/theme_bg_color">
+
+  <!--middle part：title-->
+  <TextView
+          android:id="@+id/action_bar_title"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_margin="@dimen/layout_normal"
+          android:gravity="center"
+          android:textColor="@color/white"
+          android:textSize="@dimen/t_xl"
+          android:hint="点击选择地图"
+          android:singleLine="true"/>
+
+  <!--left part-->
+  <ImageButton
+          android:id="@+id/btn_action_bar_left"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:padding="@dimen/layout_small"
+          android:layout_marginLeft="@dimen/layout_normal"
+          android:background="@drawable/icon_arrow_left"
+          android:visibility="gone"/>
+
+  <!--right part-->
+  <TextView
+          android:id="@+id/btn_action_bar_right"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:padding="@dimen/layout_small"
+          android:layout_marginRight="@dimen/layout_normal"
+          android:textColor="@color/white"
+          android:textSize="@dimen/t_l"
+          android:visibility="gone"/>
+
+  <!--middle part: search box-->
+  <EditText
+          android:id="@+id/action_bar_search_box"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColorHint="@color/hint_color_2"
+          android:hint="请输入查询内容"
+          android:textSize="@dimen/t_xl"
+          android:textColor="#ff363636"
+          android:background="@drawable/search_box"
+          android:singleLine="true"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/layout_small"
+          android:layout_marginRight="@dimen/layout_small"
+          android:layout_toLeftOf="@+id/btn_action_bar_right"
+          android:layout_toRightOf="@+id/btn_action_bar_left"/>
+
+</RelativeLayout>

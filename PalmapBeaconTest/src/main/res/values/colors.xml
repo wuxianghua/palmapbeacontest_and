@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- 常用颜色 -->
+  <color name="login_bg">#37343d</color>
+  <color name="gray_light">#b7c0bc</color>
+  <color name="dark_grey">#A3A3A3</color>
+  <color name="white">#ffffff</color>
+  <color name="transparent">#00ffffff</color>
+  <color name="black">#ff000000</color>
+  <color name="gray">#33aaaaaa</color>
+  <color name="red">#ffff0000</color>
+  <color name="yellow">#ffcf53</color>
+  <color name="bg_after_text">#a2ce62</color>
+  <color name="scan_red">#ee3e53</color>
+  <color name="pink">#FA6E9F</color>
+
+  <color name="common_text_color_1">#666666</color>
+  <color name="common_text_color_2">#363636</color>
+
+  <color name="hint_color_2">#979797</color>
+  <color name="btn_bg">#4FC1E9</color>
+  <color name="btn_bg_hover">#29AEF3</color>
+  <color name="btn_bg_invalid">#979797</color>
+
+  <color name="cursor_bg">#5B5B5B</color>
+  <color name="cursor_hover">#F39301</color>
+
+  <color name="block_segment_line">#696969</color>
+
+  <!--地图模块-->
+  <color name="map_floor_name_color">#696969</color>
+
+  <!--<color name="theme_bg_color">#6D9EFB</color>-->
+  <color name="theme_bg_color">#2c2933</color>
+  <color name="text_color_1">#ABABAB</color>
+  <color name="text_color_2">#707070</color>
+  
+  <!-- 新ui颜色 -->
+  <color name="text_color_beacon">#666666</color>
+  <color name="theme_black">#2c2933</color>
+
+  <color name="blue_light">#6fa8dc</color>
+
+
+</resources>

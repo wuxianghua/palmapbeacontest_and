@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+  <include android:id="@+id/action_bar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           layout="@layout/include_action_bar"/>
+
+  <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical">
+
+    <com.palmap.BluetoothUtils.widget.widget.WheelView
+            android:id="@+id/scene_choose_scene"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"/>
+
+    <TextView
+            android:id="@+id/scene_no_scene_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/t_xll"
+            android:textColor="@color/scan_red"
+            android:text="无场景数据"/>
+
+    <TextView
+            android:id="@+id/scene_entry_scene"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_large"
+            android:padding="@dimen/layout_normal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:textSize="@dimen/t_xxxl"
+            android:textColor="@color/white"
+            android:text="确定"
+            android:background="@drawable/btn_bg_shape"/>
+
+  </LinearLayout>
+
+</FrameLayout>

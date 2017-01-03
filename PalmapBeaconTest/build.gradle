@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.2'
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.palmap.BluetoothUtils"
+        minSdkVersion 18
+        targetSdkVersion 21
+        versionCode 10
+        versionName "1.0.10"
+
+        ndk {
+            // 设置支持的 SO 库构架，一般而言，取你所有的库支持的构架的`交集`。
+            abiFilters 'armeabi';'armeabi-v7a'; 'x86'// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+
+//应用 Bugtags 插件
+apply plugin: 'com.bugtags.library.plugin'
+
+//Bugtags 插件配置
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
+    appKey "ac60e2b06e4dc8b16b2afe68bc25e7df"  //这里是你的 appKey
+    appSecret "ba8ffa450d22cdaef2962c6ac0585d71"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+
+    //网络跟踪功能配置(企业版)
+    trackingNetworkEnabled false
+}
+
+dependencies {
+    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+    compile files('libs/nagrand-jar-with-dependencies.jar')
+    compile 'com.android.support:support-v4:24.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+
+    //用于调试
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    compile 'com.facebook.stetho:stetho:1.4.2'
+
+    compile group:'com.google.protobuf',name:'protobuf-java',version:'2.5.0'
+    compile files('libs/fastjson-1.2.4.jar')
+    compile files('libs/gson-2.1-sources.jar')
+    compile files('libs/sunjce_provider.jar')
+    compile files('libs/commons-codec-1.10.jar')
+}

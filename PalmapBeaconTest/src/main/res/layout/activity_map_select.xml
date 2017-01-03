@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <include android:id="@+id/action_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/include_action_bar"/>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar"
+        android:layout_above="@+id/function_button"
+        android:id="@+id/map_list">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/function_button"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/mall_select_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_normal"
+            android:gravity="center"
+            android:textSize="@dimen/t_xl"
+            android:textColor="@color/white"
+            android:text="进入地图"
+            android:background="@drawable/btn_bg_shape"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+        <TextView
+            android:id="@+id/mall_select_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_normal"
+            android:gravity="center"
+            android:textSize="@dimen/t_xl"
+            android:textColor="@color/white"
+            android:text="巡检记录"
+            android:background="@drawable/btn_bg_shape"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+        <TextView
+            android:id="@+id/mall_select_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_normal"
+            android:gravity="center"
+            android:textSize="@dimen/t_xl"
+            android:textColor="@color/white"
+            android:text="离线下载"
+            android:background="@drawable/btn_bg_shape"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

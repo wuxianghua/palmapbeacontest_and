@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+            android:background="@color/login_bg"
+        >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_logo"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:text="蓝牙巡检工具"
+        android:layout_gravity="center"
+        android:layout_below="@+id/iv_logo"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:text="©2016 Palmap Intelligence Co., Ltd.All Rights Reserved"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/tv_right"/>
+
+
+</RelativeLayout>
+

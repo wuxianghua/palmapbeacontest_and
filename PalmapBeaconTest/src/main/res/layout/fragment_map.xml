@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+  <!--地图界面-->
+  <com.palmaplus.nagrand.view.MapView
+          android:id="@+id/map_view"
+          android:visibility="visible"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"/>
+
+  <FrameLayout
+      android:id="@+id/white_bg"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"/>
+
+  <RelativeLayout
+          android:id="@+id/map_container"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent">
+
+  </RelativeLayout>
+
+  <!--地图界面上控件-->
+  <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/map_shootscreen"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textSize="@dimen/t_xl"
+        android:textColor="@color/white"
+        android:text="log"
+        android:background="@drawable/my_btn_bg_selector"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="9dp"/>
+
+    <ToggleButton
+        android:id="@+id/pause"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textOff=""
+        android:textOn=""
+        android:text="log"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/my_pause_btn_bg_selector"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="9dp"/>
+
+    <TextView
+        android:id="@+id/scan_info"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_toRightOf="@+id/map_shootscreen"
+        android:layout_toLeftOf="@+id/pause"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="扫描：0  匹配：0  匹配间隔：0s"
+        android:background="#99555555"
+        android:layout_marginTop="9dp"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/tag"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/map_shootscreen"-->
+        <!--android:layout_above="@+id/tv_beacon"-->
+        <!--android:background="#99555555"-->
+        <!--android:text="@string/log"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"/>-->
+    <TextView
+        android:id="@+id/tv_beacon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99555555"
+        android:layout_below="@+id/map_shootscreen"
+        android:layout_above="@+id/map_footer_2"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="15dp"/>
+
+
+
+    <!-- 定位、放大缩小、楼层切换 -->
+    <FrameLayout
+            android:id="@+id/map_footer_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true">
+
+      <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/layout_small"
+              android:paddingBottom="@dimen/layout_normal"
+              android:paddingLeft="@dimen/layout_normal"
+              android:paddingRight="@dimen/layout_normal"
+              android:layout_gravity="left">
+
+        <TextView
+                android:id="@+id/map_floor_name"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:textSize="@dimen/t_xl"
+                android:textColor="@color/white"
+                android:text="F1"
+                android:background="@drawable/my_btn_bg_selector"/>
+
+        <TextView
+                android:id="@+id/map_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_small"
+                android:background="@drawable/map_location"
+                android:visibility="gone"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/layout_small"
+              android:paddingBottom="@dimen/layout_normal"
+              android:paddingLeft="@dimen/layout_normal"
+              android:paddingRight="@dimen/layout_normal"
+              android:layout_gravity="right">
+
+        <TextView
+                android:id="@+id/map_zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/map_zoom_in"
+                android:visibility="gone"/>
+
+        <TextView
+                android:id="@+id/map_zoom_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_small"
+                android:background="@drawable/map_zoom_out"
+                android:visibility="gone"/>
+
+        <ToggleButton
+                android:id="@+id/map_toggle_btn"
+                android:layout_width="48dp"
+                android:layout_height="36dp"
+                android:background="@drawable/toggle_bg"
+                android:checked="true"
+                android:textOn="关闭"
+                android:textOff="开启"
+                android:textSize="15sp"/>
+
+      </LinearLayout>
+
+    </FrameLayout>
+
+    <!--楼层列表-->
+    <ListView
+            android:id="@+id/map_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="264dp"
+            android:layout_marginLeft="@dimen/layout_normal"
+            android:layout_above="@id/map_footer_2"
+            android:cacheColorHint="@android:color/transparent"
+            android:scrollbars="none"
+            android:clickable="true"
+            android:visibility="gone"/>
+
+  </RelativeLayout>
+
+</FrameLayout>

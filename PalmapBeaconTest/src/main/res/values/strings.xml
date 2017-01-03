@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">蓝牙巡检</string>
+    <string name="help">1.对于已离线地图，由于sdk限制需要联网验证缓存有效性，无法离线加载。\n
+    2.已下载场景的更新只会更新beacon数据，要更新地图请先在设置里面清除所有缓存重新下载。\n
+    \n</string>
+    <string name="log">此处输出的是当前手机搜索到的beacon列表，可与从平台上下载到的beacon列表进行比对，若搜索到参数相同的beacon则地图上红点变绿</string>
+    <string name="email">\@palmaplus.com</string>
+    <string name="login_setting">设置</string>
+</resources>

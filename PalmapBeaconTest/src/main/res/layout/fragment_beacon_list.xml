@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f5f5f5">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="58dp"
+      android:orientation="horizontal"
+      android:background="@color/white">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="本区域Beacon数量"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:textColor="@color/text_color_beacon"
+        android:gravity="center" />
+  <TextView
+      android:id="@+id/tv_beacon_all"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="0"
+      android:layout_weight="1"
+      android:textSize="18sp"
+      android:textColor="@color/text_color_beacon"
+      android:gravity="center" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="异常Beacon数量"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/text_color_beacon"
+        android:textSize="14dp"
+        android:gravity="center" />
+      <TextView
+          android:id="@+id/tv_beacon_abnormal"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:text="0"
+          android:layout_gravity="center"
+          android:layout_weight="1"
+          android:textColor="@color/text_color_beacon"
+          android:textSize="18sp"
+          android:gravity="center" />
+
+      </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="低电量Beacon数量"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/text_color_beacon"
+        android:textSize="14dp"
+        android:gravity="center" />
+      <TextView
+          android:id="@+id/tv_beacon_lowpower"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:text="0"
+          android:layout_weight="1"
+          android:layout_gravity="center"
+          android:textColor="@color/text_color_beacon"
+          android:textSize="18sp"
+          android:gravity="center" />
+      </LinearLayout>
+  </LinearLayout>
+  <ListView
+          android:id="@+id/fragment_beacon_list_view"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:cacheColorHint="@android:color/transparent"
+          android:scrollbars="vertical"
+          android:clickable="true"
+      android:layout_marginTop="10dp">
+
+  </ListView>
+
+</LinearLayout>
