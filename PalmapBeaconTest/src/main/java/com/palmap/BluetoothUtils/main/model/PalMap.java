@@ -16,6 +16,7 @@ public class PalMap implements Serializable{
   private long mMapId;
   private long mSceneId;
   private String mProvinceName;
+  private String mCityName;
   private String mAppKey;
 
   public String getAppKey() {
@@ -56,8 +57,16 @@ public class PalMap implements Serializable{
     return mProvinceName;
   }
 
+  public String getCityName() {
+    return mCityName;
+  }
+
   public void setProvinceName(String mProvinceName) {
     this.mProvinceName = mProvinceName;
+  }
+
+  public void setCityName(String mCityName) {
+    this.mCityName = mCityName;
   }
 
   public void setName(String mName) {
@@ -87,12 +96,12 @@ public class PalMap implements Serializable{
     if (object == null){
       return null;
     }
-
     PalMap palMap = new PalMap();
     palMap.setName(object.optString("mapName", "不知道叫什么名字"));
     palMap.setMapId(object.optLong("mapId", -1));
     palMap.setSceneId(object.optLong("sceneId", -1));
     palMap.setProvinceName(object.optString("provinceName", "不知道在什么地方"));
+    palMap.setCityName(object.optString("cityName",""));
     return palMap;
   }
 
@@ -145,7 +154,6 @@ public class PalMap implements Serializable{
         e.printStackTrace();
       }
     }
-
     return palMapList;
   }
 

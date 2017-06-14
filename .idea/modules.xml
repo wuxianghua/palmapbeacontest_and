@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BeaconTest.iml" filepath="$PROJECT_DIR$/BeaconTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/PalmapBeaconTest/PalmapBeaconTest.iml" filepath="$PROJECT_DIR$/PalmapBeaconTest/PalmapBeaconTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/palmapbeacontest_and.iml" filepath="$PROJECT_DIR$/palmapbeacontest_and.iml" />
     </modules>
   </component>
 </project>

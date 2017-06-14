@@ -2,6 +2,7 @@ package com.palmap.BluetoothUtils.widget;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -74,9 +75,14 @@ public class Mark extends LinearLayout implements OverlayCell{
     uuid = beacon.getUuid();
   }
 
+  @Override
+  public boolean onInterceptTouchEvent(MotionEvent ev) {
+    return true;
+  }
+
   /*
-  * 获取mark文本
-  * */
+        * 获取mark文本
+        * */
   public String getText(){
     return mTextView.getText().toString();
   }

@@ -91,8 +91,9 @@ public class MapListAdapter extends BaseAdapter {
     }
     // 填内容
     String province = mPalMapList.get(position).getProvinceName();
+    String city = mPalMapList.get(position).getCityName();
     if (province != null && !"".equals(province))
-      viewHolder.mapName.setText(province + " - " + mPalMapList.get(position).getName());
+      viewHolder.mapName.setText(province + " - "+ city + " - " + mPalMapList.get(position).getName());
     else
       viewHolder.mapName.setText(mPalMapList.get(position).getName());
 

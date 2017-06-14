@@ -69,8 +69,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 //      mUserName.setText("799505946@qq.com");
 //      mPwd.setText("zhiluji123123");
 //
-      mUserName.setText("chao.ma@palmaplus.com");
-      mPwd.setText("209010");
+      mUserName.setText("1641623024@qq.com");
+      mPwd.setText("Palmap+2017");
 
 //      mUserName.setText("469344063@qq.com");
 //      mPwd.setText("niefei159915");//办公室定位
